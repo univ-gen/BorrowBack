@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@color/bb_surface">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+        <TextView
+            android:id="@+id/txtStatus"
+            style="@style/BBLabel"
+            android:textColor="@color/bb_primary"
+            android:layout_marginBottom="6dp" />
+        <TextView
+            android:id="@+id/txtItemName"
+            style="@style/BBHeading" />
+        <TextView
+            android:id="@+id/txtBorrower"
+            style="@style/BBBody" />
+        <TextView
+            android:id="@+id/txtReturnDate"
+            style="@style/BBBody"
+            android:layout_marginBottom="0dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

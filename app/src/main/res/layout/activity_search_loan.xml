@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <include
+            layout="@layout/header_navigation" />
+        <TextView
+            style="@style/BBTitle"
+            android:text="@string/search_title" />
+        <TextView
+            style="@style/BBBody"
+            android:text="@string/search_intro" />
+        <TextView
+            style="@style/BBLabel"
+            android:text="@string/search_label"
+            android:labelFor="@+id/editSearch" />
+        <EditText
+            android:id="@+id/editSearch"
+            style="@style/BBInput"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:maxLength="120"
+            android:imeOptions="actionSearch" />
+        <Button
+            android:id="@+id/btnSearch"
+            style="@style/BBButton"
+            android:text="@string/search" />
+        <TextView
+            android:id="@+id/txtResultCount"
+            style="@style/BBLabel"
+            android:layout_marginBottom="14dp" />
+        <TextView
+            style="@style/BBBody"
+            android:text="@string/search_initial"
+            android:id="@+id/txtEmpty"
+            android:gravity="center"
+            android:padding="24dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLoans"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="12dp" />
+    </LinearLayout>
+</LinearLayout>

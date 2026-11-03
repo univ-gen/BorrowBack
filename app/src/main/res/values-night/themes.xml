@@ -1,0 +1,13 @@
+<resources>
+    <!-- Keep a consistent, readable light palette when the device uses dark mode. -->
+    <style name="Base.Theme.BorrowBack" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/bb_primary</item>
+        <item name="colorPrimaryDark">@color/bb_primary_dark</item>
+        <item name="colorAccent">@color/bb_primary</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowBackground">@color/bb_background</item>
+        <item name="android:colorBackground">@color/bb_background</item>
+        <item name="android:textColorPrimary">@color/bb_text</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bb_background">#F4F6F3</color>
+    <color name="bb_surface">#FFFFFF</color>
+    <color name="bb_primary">#16665C</color>
+    <color name="bb_primary_dark">#104D46</color>
+    <color name="bb_text">#192E2B</color>
+    <color name="bb_muted">#536762</color>
+    <color name="bb_soft">#E3EEE7</color>
+    <color name="bb_danger">#A12D35</color>
+</resources>

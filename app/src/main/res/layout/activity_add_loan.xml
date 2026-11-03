@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <include
+                layout="@layout/header_navigation" />
+            <TextView
+                style="@style/BBTitle"
+                android:text="@string/add_title" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="@color/bb_surface">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+                    <TextView
+                        style="@style/BBLabel"
+                        android:text="@string/item_label"
+                        android:labelFor="@+id/editItemName" />
+                    <EditText
+                        android:id="@+id/editItemName"
+                        style="@style/BBInput"
+                        android:hint="@string/item_hint"
+                        android:inputType="textCapSentences"
+                        android:maxLength="120" />
+                    <TextView
+                        style="@style/BBLabel"
+                        android:text="@string/borrower_label"
+                        android:labelFor="@+id/editBorrower" />
+                    <EditText
+                        android:id="@+id/editBorrower"
+                        style="@style/BBInput"
+                        android:hint="@string/borrower_hint"
+                        android:inputType="textCapWords"
+                        android:maxLength="120" />
+                    <TextView
+                        style="@style/BBLabel"
+                        android:text="@string/borrowed_label"
+                        android:labelFor="@+id/editBorrowedDate" />
+                    <EditText
+                        android:id="@+id/editBorrowedDate"
+                        style="@style/BBInput"
+                        android:hint="@string/choose_date"
+                        android:inputType="none"
+                        android:maxLength="10"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                        android:drawablePadding="8dp" />
+                    <TextView
+                        style="@style/BBLabel"
+                        android:text="@string/return_label"
+                        android:labelFor="@+id/editReturnDate" />
+                    <EditText
+                        android:id="@+id/editReturnDate"
+                        style="@style/BBInput"
+                        android:hint="@string/choose_date"
+                        android:inputType="none"
+                        android:maxLength="10"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                        android:drawablePadding="8dp" />
+                    <TextView
+                        style="@style/BBLabel"
+                        android:text="@string/notes_label"
+                        android:labelFor="@+id/editNotes" />
+                    <EditText
+                        android:id="@+id/editNotes"
+                        style="@style/BBInput"
+                        android:hint="@string/notes_hint"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:singleLine="false"
+                        android:minLines="2"
+                        android:maxLength="1000"
+                        android:gravity="top|start" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/btnSaveLoan"
+                style="@style/BBButton"
+                android:text="@string/save_loan" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

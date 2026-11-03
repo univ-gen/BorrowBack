@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <include
+                layout="@layout/header_navigation" />
+            <TextView
+                style="@style/BBTitle"
+                android:text="@string/details_title" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="@color/bb_surface">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+                    <TextView
+                        android:id="@+id/txtDetailStatus"
+                        style="@style/BBLabel"
+                        android:textColor="@color/bb_primary"
+                        android:layout_marginBottom="12dp" />
+                    <TextView
+                        android:id="@+id/txtDetailItem"
+                        style="@style/BBTitle" />
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp">
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                style="@style/BBBody"
+                                android:text="@string/borrower_short"
+                                android:layout_width="110dp"
+                                android:paddingEnd="12dp"
+                                android:paddingStart="0dp" />
+                            <TextView
+                                android:id="@+id/txtDetailBorrower"
+                                style="@style/BBBody"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/bb_text" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                style="@style/BBBody"
+                                android:text="@string/borrowed_short"
+                                android:layout_width="110dp"
+                                android:paddingEnd="12dp"
+                                android:paddingStart="0dp" />
+                            <TextView
+                                android:id="@+id/txtDetailBorrowedDate"
+                                style="@style/BBBody"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/bb_text" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                style="@style/BBBody"
+                                android:text="@string/return_short"
+                                android:layout_width="110dp"
+                                android:paddingEnd="12dp"
+                                android:paddingStart="0dp" />
+                            <TextView
+                                android:id="@+id/txtDetailReturnDate"
+                                style="@style/BBBody"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/bb_text" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="@color/bb_surface">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+                    <TextView
+                        style="@style/BBHeading"
+                        android:text="@string/notes_title" />
+                    <TextView
+                        android:id="@+id/txtDetailNotes"
+                        style="@style/BBBody"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                style="@style/BBBody"
+                android:text="@string/delete_help" />
+            <Button
+                android:id="@+id/btnDeleteLoan"
+                style="@style/BBButton"
+                android:text="@string/delete_loan"
+                app:backgroundTint="@color/bb_danger" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

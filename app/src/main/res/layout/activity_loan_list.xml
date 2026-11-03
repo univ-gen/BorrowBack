@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <include
+            layout="@layout/header_navigation" />
+        <TextView
+            style="@style/BBTitle"
+            android:text="@string/list_title" />
+        <TextView
+            style="@style/BBBody"
+            android:text="@string/list_intro" />
+        <Button
+            android:id="@+id/btnAddLoan"
+            style="@style/BBButton"
+            android:text="@string/add_loan" />
+        <TextView
+            android:id="@+id/txtResultCount"
+            style="@style/BBLabel"
+            android:layout_marginBottom="14dp" />
+        <TextView
+            style="@style/BBBody"
+            android:text="@string/no_loans"
+            android:id="@+id/txtEmpty"
+            android:gravity="center"
+            android:padding="24dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLoans"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="12dp" />
+    </LinearLayout>
+</LinearLayout>
